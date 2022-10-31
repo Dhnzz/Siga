@@ -16,7 +16,8 @@ class DesaController extends Controller
     public function index()
     {
         $data = Desa::all();
-        return view('desa.desa-index', compact('data'));
+        $active = 'desa';
+        return view('desa.desa-index', compact('data','active'));
     }
 
     /**

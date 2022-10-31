@@ -1,10 +1,6 @@
 <?php
 
-use App\Http\Controllers\
-{
-    PendudukController, DesaController, AgamaController, 
-    OpdController, PekerjaanController, TahunController
-};
+use App\Http\Controllers\{PendudukController, DesaController, AgamaController, OpdController, PekerjaanController, TahunController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::get('/penduduks/index', [PendudukController::class, 'index'])->name('penduduks.index');
-
 
 // desa
 Route::get('/desa/index', [DesaController::class, 'index'])->name('desa.index');
